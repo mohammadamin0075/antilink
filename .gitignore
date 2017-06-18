@@ -1,0 +1,18 @@
+sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make unzip git redis-server g++ libjansson-dev libpython-dev expat libexpat1-dev
+cd $HOME
+git clone https://github.com/XtBot/xt.git
+cd SignalTG
+chmod +x launchfix2.sh
+chmod +x launch.sh
+chmod +x autolaunch.sh
+chmod +x steady.sh
+./launch.sh install
+cd .luarocks
+cd bin
+./luarocks-5.2 install luafilesystem
+./luarocks-5.2 install lub
+./luarocks-5.2 install luaexpat
+cd $HOME
+cd SignalTG
+./launch.sh install
+./launch.sh # Enter a phone number & confirmation code.
